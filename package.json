@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "eleventy --serve --pathprefix=mayaa & tailwindcss -i ./src/css/tailwind.css -o ./_site/css/style.css --watch",
-    "build:prod": "eleventy --pathprefix=mayaa && tailwindcss -i ./src/css/tailwind.css -o ./_site/css/style.css --minify"
+    "build": "eleventy --serve --pathprefix=mayaa-site & tailwindcss -i ./src/css/tailwind.css -o ./_site/css/style.css --watch",
+    "build:prod": "eleventy --pathprefix=mayaa-site && tailwindcss -i ./src/css/tailwind.css -o ./_site/css/style.css --minify"
   },
   "author": "",
   "license": "ISC",

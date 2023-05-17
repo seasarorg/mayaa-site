@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/css/prismjs/prism.min.css" rel="stylesheet" />
     <link href="/css/style.css" rel="stylesheet" />
+    <link rel="preload" href="/images/bg_hdr_subproject.jpg" as="image">
+    <link rel="preload" href="/images/bg_hdr_about.jpg" as="image">
+    <link rel="preload" href="/images/bg_hdr_support.jpg" as="image">
+    <link rel="preload" href="/images/bg_hdr_doc.jpg" as="image">
+    <link rel="preload" href="/images/bg_hdr_download.jpg" as="image">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
@@ -17,7 +22,7 @@
 </head>
 <body>
   {% include navi %}
-  <aside id="logo-sidebar" class="{% if page.url == "/" %}sm:hidden{% endif %} fixed top-0 left-0 z-40 w-72 h-screen pt-24 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
+  <aside id="logo-sidebar" class="{% if page.url == "/" %}sm:hidden{% endif %} fixed top-0 left-0 z-40 w-72 h-screen pt-16 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
     <div class="h-full px-3 pb-20 overflow-y-auto bg-white dark:bg-gray-800">
       {% assign navPages = collections.all | eleventyNavigation %}
       <ul class="ml-2 space-y-1 font-medium">
@@ -74,9 +79,9 @@
       </div>
     </aside>
 
-  <div class="mt-12 sm:p-4 {% if page.url != "/" %}sm:ml-64{% endif %}">
+  <div class="mt-2 sm:p-4 {% if page.url != "/" %}sm:ml-64{% endif %}">
     <article class="{% if page.url != "/" %}article-link{% endif %} sm:px-8 p-0 max-w-screen-lg mx-auto text-xs">
-        <section class="bg-white dark:bg-slate-800 rounded-lg min-h-fit px-6 py-8 ring-1 ring-slate-900/5 shadow-xl">
+        <section class="bg-white dark:bg-slate-800 rounded-lg min-h-fit px-6 py-6 ring-1 ring-slate-900/5 shadow-xl">
             {{ content }}
         </section>
     </article>

@@ -1,7 +1,7 @@
-<nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+<nav class="sticky top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
 
   <!-- notice now under working -->
-  <div id="sticky-banner" tabindex="-1" class="z-50 flex justify-between w-full p-1 border-b border-red-200 bg-red-50 dark:bg-red-700 dark:border-red-600">
+  <!-- <div id="sticky-banner" tabindex="-1" class="z-50 flex justify-between w-full p-1 border-b border-red-200 bg-red-50 dark:bg-red-700 dark:border-red-600">
     <div class="flex items-center mx-auto">
       <span class="inline-flex p-1 mr-3 bg-red-200 rounded-full dark:bg-red-600">
         <svg class="w-4 h-4 text-red-500 dark:text-red-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -23,7 +23,7 @@
         <span class="sr-only">Close banner</span>
       </button>
     </div>
-  </div>
+  </div> -->
   <!-- /notice now under working -->
   <div aria-hidden id="hdr-bg" class="bg-img-bluesky">
     <div class="px-2 pt-2 pb-0 lg:px-5 lg:pl-3 bg-img-mayaa-illust">
@@ -50,10 +50,13 @@
     </div>
   </div>
   <script>
-    const bg_list = ["bg-img-bluesky", "bg-img-broadsea", "bg-img-grass", "bg-img-greenrock", "bg-img-deepsea", "bg-img-reef" ];
+    // "bg-img-bluesky", 
+    const bg_list = ["bg-img-broadsea", "bg-img-grass", "bg-img-deepsea", "bg-img-greenrock", "bg-img-reef"];
+    let current = 0;
     setInterval(function(){
-      document.getElementById("hdr-bg").classList.remove(...bg_list);
-      document.getElementById("hdr-bg").classList.add(bg_list[Math.floor(Math.random() * bg_list.length)]);
-    }, 30000);
+      document.getElementById("hdr-bg").classList.add(bg_list[current + 1]);
+      document.getElementById("hdr-bg").classList.remove(bg_list[current]);
+      current = (current + 1) % bg_list.length;
+    }, 10000);
   </script>
 </nav>

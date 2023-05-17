@@ -7,7 +7,7 @@ eleventyNavigation:
   order: 1
 ---
 
-## about Mayaa
+## Mayaaとは
 
 MayaaはHTMLをベースとしたテンプレートによるプログラマとデザイナの作業分担を強く意識したWEBフロントサービスエンジンです。
 
