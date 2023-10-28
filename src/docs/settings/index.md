@@ -40,7 +40,7 @@ WEB-INF/
     "http://mayaa.seasar.org/dtd/mayaa-provider_1_0.dtd">
 <provider>
 
-</provider></span>
+</provider>
 ```
 
 #### ■Engine のパラメータ {#engine}
@@ -55,14 +55,14 @@ Mayaa 標準の Engine に対するパラメータをいくつか説明します
     "http://mayaa.seasar.org/dtd/mayaa-provider_1_0.dtd">
 <provider>
     <engine>
-        <parameter name="`defaultSpecification`" value="`/default.mayaa`"/>
-        <parameter name="`checkTimestamp`" value="`true`"/>
-        <parameter name="`suffixSeparator`" value="`$`"/>
-        <parameter name="`welcomeFileName`" value="`index.html`"/>
-        <parameter name="`requestCharacterEncoding`" value="`UTF-8`"/>
-        <parameter name="`surviveLimit`" value="`5`"/>
-        <parameter name="`forwardLimit`" value="`10`"/>
-        <parameter name="`convertCharset`" value="`false`"/>
+        <parameter name="defaultSpecification" value="/default.mayaa"/>
+        <parameter name="checkTimestamp" value="true"/>
+        <parameter name="suffixSeparator" value="$"/>
+        <parameter name="welcomeFileName" value="index.html"/>
+        <parameter name="requestCharacterEncoding" value="UTF-8"/>
+        <parameter name="surviveLimit" value="5"/>
+        <parameter name="forwardLimit" value="10"/>
+        <parameter name="convertCharset" value="false"/>
     </engine>
 </provider>
 ```
@@ -110,12 +110,12 @@ Mayaa 標準の `TemplateBuilder` に対するパラメータをいくつか説�
     "http://mayaa.seasar.org/dtd/mayaa-provider_1_0.dtd">
 <provider>
     <templateBuilder>
-        <parameter name="`outputTemplateWhitespace`" value="`true`"/>
-        <parameter name="`outputMayaaWhitespace`" value="`false`"/>
-        <parameter name="`optimize`" value="`true`"/>
-        <parameter name="`defaultCharset`" value="`UTF-8`"/>
+        <parameter name="outputTemplateWhitespace" value="true"/>
+        <parameter name="outputMayaaWhitespace" value="false"/>
+        <parameter name="optimize" value="true"/>
+        <parameter name="defaultCharset" value="UTF-8"/>
                 <!-- 1.1.22 で追加されたパラメータ -->
-        <parameter name="`replaceSSIInclude`" value="`true`"/>
+        <parameter name="replaceSSIInclude" value="true"/>
                 <!-- 1.1.25 で追加されたパラメータ -->
     </templateBuilder>
 </provider>

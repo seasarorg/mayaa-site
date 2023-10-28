@@ -31,11 +31,11 @@ eleventyNavigation:
     "http://mayaa.seasar.org/dtd/mayaa-provider_1_0.dtd">
 <provider>
     <engine>
-        <parameter name="`autoBuild`" value="`false`"/>
-        <parameter name="`autoBuild.repeat`" value="`false`"/>
-        <parameter name="`autoBuild.wait`" value="`60`"/>
-        <parameter name="`autoBuild.fileNameFilters`" value="`.html`"/>
-        <parameter name="`autoBuild.renderMate`" value="`false`"/>
+        <parameter name="autoBuild" value="false"/>
+        <parameter name="autoBuild.repeat" value="false"/>
+        <parameter name="autoBuild.wait" value="60"/>
+        <parameter name="autoBuild.fileNameFilters" value=".html"/>
+        <parameter name="autoBuild.renderMate" value="false"/>
     </engine>
 </provider>
 ```

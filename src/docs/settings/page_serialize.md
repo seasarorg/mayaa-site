@@ -33,7 +33,7 @@ Mayaa ではページをビルドした結果、描画するために必要な�
     "http://mayaa.seasar.org/dtd/mayaa-provider_1_0.dtd">
 <provider>
     <engine>
-        <parameter name="`pageSerialize`" value="`false`"/>
+        <parameter name="pageSerialize" value="false"/>
     </engine>
 </provider>
 ```

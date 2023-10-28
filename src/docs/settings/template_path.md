@@ -90,9 +90,9 @@ WEB-INF/
     "http://mayaa.seasar.org/dtd/mayaa-provider_1_0.dtd">
 <provider>
     <engine>
-        <parameter name="`notTemplatePathPattern`" value="`.*`"/>
-        <parameter name="`templatePathPattern`" value="`.*\.html`"/>
-        <parameter name="`notTemplatePathPattern`" value="`/doc/.*\.html`"/>
+        <parameter name="notTemplatePathPattern" value=".*"/>
+        <parameter name="templatePathPattern" value=".*\.html"/>
+        <parameter name="notTemplatePathPattern" value="/doc/.*\.html"/>
     </engine>
 </provider>
 ```

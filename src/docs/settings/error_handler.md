@@ -23,8 +23,8 @@ eleventyNavigation:
 <provider>
     <engine>
         <errorHandler>
-            <parameter name="`folder`" value="`/`"/>
-            <parameter name="`extension`" value="`html`"/>
+            <parameter name="folder" value="/"/>
+            <parameter name="extension" value="html"/>
         </errorHandler>
         <parameter name="..." value="..."/>
     </engine>
