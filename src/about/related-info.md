@@ -12,14 +12,14 @@ eleventyNavigation:
 
 ### 発表資料
 
-* [Seasar Conference 2006 Autumn のプレゼンテーション](/about/slide/SC2006Autumn_B1_Mayaa.pdf) (2006/11/12)
-* [OSC2005-fall 「Mayaa」のご紹介プレゼンテーション](/about/slide/TheMayaaWay.pdf) (2005/09/17)
-* [未踏キックオフセミナープレゼンテーション](/about/slide/10-13kickoff.pdf) (2005/07/17)
+* [Seasar Conference 2006 Autumn のプレゼンテーション](https://mayaa.seasar.org/documentation/slide/SC2006Autumn_B1_Mayaa.pdf) (2006/11/12)
+* [OSC2005-fall 「Mayaa」のご紹介プレゼンテーション](https://mayaa.seasar.org/documentation/slide/TheMayaaWay.pdf) (2005/09/17)
+* [未踏キックオフセミナープレゼンテーション](https://mayaa.seasar.org/documentation/slide/10-13kickoff.pdf) (2005/07/17)
 
 ### 外部紹介サイト
 * [そろそろ2年間Mayaa使ってわかったことを書く](https://www.susumuis.info/entry/20110708/p1) susumuishiさん
 
-* [2年間Mayaaを使ってわかったこと その２](https://www.susumuis.info/entry/20110715/p1)
+* [2年間Mayaaを使ってわかったこと その２](https://www.susumuis.info/entry/20110715/p1) susumuishiさん
 
 * [プログラマーとデザイナーの境界が縮まってきた気がする](https://www.susumuis.info/entry/20101109/1289292233)
 
