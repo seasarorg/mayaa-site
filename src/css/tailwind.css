@@ -68,7 +68,7 @@ code[data-filename]:before {
   body {
     @apply bg-gray-100 dark:bg-gray-800 text-sm;
   }
-  h2 {
+  h1,h2 {
     @apply py-2 my-4 text-2xl text-blue-800 font-semibold;
   }
   h3 {
@@ -136,8 +136,13 @@ code[data-filename]:before {
   }
 
   article table {
-    @apply w-full overflow-auto my-4 border-collapse border border-gray-400;
+    @apply min-w-full table-auto overflow-auto my-4 border-collapse border border-gray-400;
+    /* @apply min-w-full text-center text-sm font-light table-auto overflow-scroll; */
   }
+  article th {
+    @apply bg-blue-100;
+  }
+
   article th,
   article td {
     @apply border border-gray-400 px-4 py-2;
