@@ -36,7 +36,7 @@
       {% assign navPages = collections.all | eleventyNavigation %}
       <ul class="ml-2 space-y-1 font-medium">
       {%- for entry in navPages %}
-        <li{% if entry.url == page.url %} class="my-active-class"{% endif %}>
+        <li{% if entry.url == page.url %} class="my-active-class"{% endif %} data-index-level=1>
           <span class="flex items-center p-1 mb-0 text-gray-900 rounded-lg dark:text-white" >
               <svg aria-hidden="true" class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
               {%- if entry.sectiontitle %}
@@ -48,7 +48,7 @@
           {%- if entry.children.length > 0 %}
             <ul class="mt-0 ml-2">
             {%- unless entry.nopage %}
-              <li>
+              <li data-index-level=2>
                 <a href="{{ entry.url }}" {% if entry.url == page.url %}aria-current="page"{% endif %} class="block items-center p-1 ml-3 mb-0 text-gray-900 rounded-lg dark:text-white {% if entry.url != page.url %}hover:bg-gray-100 dark:hover:bg-gray-700{% endif %}">
                   <p class="block">{{ entry.title }}</p>
                 {%- if entry.subtitle %}
@@ -57,7 +57,7 @@
               </a></li>
             {%- endunless %}
             {%- for post in entry.children %}
-              <li>
+              <li data-index-level=2>
                   <a href="{{ post.url }}" {% if post.url == page.url %}aria-current="page"{% endif %} class="block items-center p-1 ml-3 mb-0 text-gray-900 rounded-lg dark:text-white {% if post.url != page.url %}hover:bg-gray-100 dark:hover:bg-gray-700{% endif %}">
                     <p class="block">{{ post.title }}</p>
                     {%- if post.subtitle %}
@@ -67,7 +67,7 @@
                   {%- if post.children.length > 0 %}
                   <ul class="mt-0 ml-2">
                   {%- for post1 in post.children %}
-                    <li>
+                    <li data-index-level=3>
                         <a href="{{ post1.url }}" {% if post1.url == page.url %}aria-current="page"{% endif %} class="block items-center p-1 ml-3 mb-0 text-gray-900 rounded-lg dark:text-white  {% if post1.url != page.url %}hover:bg-gray-100 dark:hover:bg-gray-700{% endif %}">
                           <p class="block">{{ post1.title }}</p>
                           {%- if post1.subtitle %}
@@ -88,15 +88,22 @@
       </div>
     </aside>
 
-  <div class="mt-2 sm:p-4 {% if page.url != "/" %}sm:ml-64{% endif %}">
-    <article class="{% if page.url != "/" %}article-link{% endif %} sm:px-8 p-0 max-w-screen-lg mx-auto text-xs">
-        <section class="bg-white dark:bg-slate-800 rounded-lg min-h-fit px-6 py-6 ring-1 ring-slate-900/5 shadow-xl">
-            {{ content }}
-        </section>
-    </article>
-    <footer>
-      <small class="block mt-4 text-right pr-2 font-bold text-gray-500 text-xs">&copy; 2004-2023 the Seasar Foundation and others.</small>
-    </footer>
-  </div>
-</body>
+    <div class="mt-2 sm:p-4 {% if page.url != "/" %}sm:ml-64{% endif %}">
+      <article class="{% if page.url != "/" %}article-link{% endif %} sm:px-8 p-0 max-w-screen-lg mx-auto text-xs">
+          <section class="bg-white dark:bg-slate-800 rounded-lg min-h-fit px-6 py-6 ring-1 ring-slate-900/5 shadow-xl">
+              {{ content }}
+          </section>
+      </article>
+      <footer>
+        <small class="block mt-4 text-right pr-2 font-bold text-gray-500 text-xs">&copy; 2004-2023 the Seasar Foundation and others.</small>
+      </footer>
+    </div>
+
+    <script>
+        const asideHeight = document.querySelector("aside").offsetHeight;
+        const currentOffsetTop = document.querySelector("[aria-current=page]").closest("[data-index-level='1']").offsetTop;
+        const wrapper = document.querySelector("aside > div");
+        wrapper.scrollBy(0, currentOffsetTop - wrapper.offsetTop);
+    </script>
+  </body>
 </html>
