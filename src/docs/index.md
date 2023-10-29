@@ -57,7 +57,7 @@ eleventyNavigation:
 * [パス自動調整の設定](path_adjust_settings/)
 
 ### 付録
-* [カスタムタグの注意点](mayaa_customtag_diff/)
+* [カスタムタグの注意点](/docs/jsp-taglib/#difference)
 * [JavaScript Tips](mayaa_rhino_tips/)
 * [その他の注意点](note/)
 * [IBM JDKの注意点](ibm_jdk/)

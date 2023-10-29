@@ -21,7 +21,7 @@ CSS や JavaScript から使うために `id` 属性を定義しても、Mayaa �
 テンプレート上の `id` を無視する場合には、<a href="/docs/processors/#ignore">`ignore` タグ</a>を使ってその `id` を無視指定します。xpath 指定はできません。
 mayaa ファイルに対応する指定がない場合には、初回アクセス時のログに次のような警告が出力されます。
 
-※htmlのidを常に無視したい場合は 5-6「<a href="equals_id_resolver.html">id 属性を無視する</a>」をご覧ください。
+※htmlのidを常に無視したい場合は 5-6「<a href="/docs/settings/equals_id_resolver/">id 属性を無視する</a>」をご覧ください。
 
 ```
 the injection id([対象 id の値]) is not found on the template, file://[URL]

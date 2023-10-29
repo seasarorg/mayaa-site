@@ -10,7 +10,7 @@ tags: tutorial
 
 ## {{ title }}
 
-Mayaa では JSP カスタムタグをほぼそのまま利用できます (違いについては「[Mayaa と JSP カスタムタグ](mayaa_customtag_diff.html)」を参照してください)。ここでは例として JSTL 1.0 の一部を使ってみましょう。Mayaa Getting Started package には JSTL 1.1 のライブラリ (Jakarta Taglibs - Standard Taglib 1.1.2) を同梱していますので、.mayaa ファイルに記述を追加するだけで使えるようになります。(core および format のみ)
+Mayaa では JSP カスタムタグをほぼそのまま利用できます (違いについては「[Appendix 1. カスタムタグの注意点](/docs/jsp-taglib/#difference)」を参照してください)。ここでは例として JSTL 1.0 の一部を使ってみましょう。Mayaa Getting Started package には JSTL 1.1 のライブラリ (Jakarta Taglibs - Standard Taglib 1.1.2) を同梱していますので、.mayaa ファイルに記述を追加するだけで使えるようになります。(core および format のみ)
 
 ### JSTL core の out タグを使う
 
@@ -110,10 +110,10 @@ Mayaa では JSP カスタムタグをほぼそのまま利用できます (違�
 ```
 
 この実行結果は Mayaa 1.1.2 以前の場合、{% proc "m:write" %}の実行結果「3」と異なり、「3.0」となります。
-これは、スクリプトから `c:out` に渡る値の型が double になるためです。(「[Mayaa と JSP カスタムタグ](mayaa_customtag_diff.html)」を参照してください)
+これは、スクリプトから `c:out` に渡る値の型が double になるためです。(「[Appendix 1. カスタムタグの注意点](/docs/jsp-taglib/#difference)」を参照してください)
 
 
-## Appendix 1. カスタムタグの注意点
+## Appendix 1. カスタムタグの注意点 {#difference}
 
 Mayaa で JSP カスタムタグを利用する場合、JSP カスタムタグの仕様と異なる点があります。
 

@@ -80,7 +80,7 @@ HTML の id 属性は CSS や JavaScript などから利用することもあり
 
 `m:id` 属性と id 属性の両方がある場合、mayaa ファイルとのバインディングには `m:id` 属性が優先されます。また、`m:id` 属性は実行時に出力されません。
 
-また、HTML の id を完全に無視したい場合、5-6.「<a href="equals_id_resolver.html">id 属性を無視する</a>」に従って設定してください。
+また、HTML の id を完全に無視したい場合、5-6.「<a href="/docs/settings/equals_id_resolver/">id 属性を無視する</a>」に従って設定してください。
 
 ```html {data-filename=hello.html}
 <html xmlns:m="http://mayaa.seasar.org">

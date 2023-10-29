@@ -129,7 +129,7 @@ eleventyNavigation:
 * サイトリニューアルに合わせて変更しました。
 
 ### 2005/11/16 {#u20051116}
-* Appendix 1.「[カスタムタグの注意点](mayaa_customtag_diff.html)」からスクリプティング変数の違いについての記述を削除しました。(0.9.20 の修正に対応)
+* Appendix 1.「[カスタムタグの注意点](/docs/jsp-taglib/#difference)」からスクリプティング変数の違いについての記述を削除しました。(0.9.20 の修正に対応)
 
 ### 2005/11/14 {#u20051114}
 * 1-1.「[Mayaa とは何か](about.html)」を追加しました。Mayaa の立ち位置、概要などです。
@@ -147,7 +147,7 @@ eleventyNavigation:
 * Appendix 3.「[その他の注意点](note.html)」の文字エンコーディングについての記述を修正しました。
 
 ### 2005/10/28 {#u20051028}
-* Appendix 1.「[カスタムタグの注意点](mayaa_customtag_diff.html)」を追加しました。
+* Appendix 1.「[カスタムタグの注意点](/docs/jsp-taglib/#difference)」を追加しました。
 * 「[Mayaa core プロセッサ リファレンス](/docs/processors/)」を追加しました。
 * Appendix 2.「[JavaScript Tips](mayaa_rhino_tips.html)」を追加しました。
 * Appendix 3.「[その他の注意点](note.html)」を追加しました。
