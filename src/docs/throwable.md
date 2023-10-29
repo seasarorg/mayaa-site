@@ -41,8 +41,7 @@ Mayaa 標準のエラーページを表示しないようにするには、コ�
   - org.seasar.mayaa.impl.engine.PageNotFoundException.html
 ```
 
-```html
-org.seasar.mayaa.impl.engine.PageNotFoundException.html
+```html {data-filename=org.seasar.mayaa.impl.engine.PageNotFoundException.html}
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -56,7 +55,7 @@ org.seasar.mayaa.impl.engine.PageNotFoundException.html
 
 ブラウザで http://localhost:8080/mayaa/not_exists.html にアクセスしてみましょう。
 
-```
+```html
 実行結果 (改行などは実際の実行結果と異なります)
 <html>
 <head>
@@ -81,7 +80,7 @@ org.seasar.mayaa.impl.engine.PageNotFoundException.html
 ```
 
 ```html {data-filename=org.seasar.mayaa.impl.engine.PageNotFoundException.html}
-< class="file"><html>
+<html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>404</title>
@@ -98,10 +97,10 @@ org.seasar.mayaa.impl.engine.PageNotFoundException.html
 <m:mayaa xmlns:m="http://mayaa.seasar.org" noCache="true">
     <m:write m:id="pageName" value="${ request.requestedPath }" />
 </m:mayaa>
-
+```
 ブラウザで http://localhost:8080/mayaa/not_exists.html にアクセスしてみましょう。
 
-```
+```html
 実行結果 (改行などは実際の実行結果と異なります)
 <html>
 <head>
