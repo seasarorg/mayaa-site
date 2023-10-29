@@ -1,6 +1,8 @@
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
+const site = require('./src/_data/site.js');
+
 const markdownIt = require("markdown-it");
 const markdownItPrism = require('markdown-it-prism');
 const markdownItAttrs = require('markdown-it-attrs');
@@ -53,6 +55,16 @@ module.exports = function(eleventyConfig) {
     dynamicPartials: false,
     strictFilters: false, // renamed from `strict_filters` in Eleventy 1.0
   });
+
+  eleventyConfig.addFilter("absoluteUrl", function (url) {
+    try {
+      return new URL(site.prefix + url, site.baseUrl).href;
+    } catch (err) {
+      console.error(err);
+      return url;
+    }
+  });
+
   return {
     dir: {
       input: "src",
