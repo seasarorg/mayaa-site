@@ -3,6 +3,7 @@ layout: base
 title: パス自動調整の設定
 eleventyNavigation:
   key: パス自動調整の設定
+  subtitle: PathAdjuster
   parent: エンジンの設定
   order: 9
 ---
