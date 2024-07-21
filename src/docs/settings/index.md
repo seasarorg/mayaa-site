@@ -11,20 +11,30 @@ tags: tutorial
 
 ### ServiceProviderの設定
 
-Mayaa エンジンの設定には、次に示す XML ファイルを使います。このファイルは `META-INF` の下に `org.seasar.mayaa.provider.ServiceProvider` という名前で作成します。
+Mayaa エンジンの設定には、`org.seasar.mayaa.provider.ServiceProvider` というファイル名のXMLファイルを使います。
+v1.3.0以降はこのファイルは下記の順序で配置先を確認して最初に見つかった場所のものが採用されます。
+v1.2 までは存在しているファイルを逆の順序ですべて読み込み、最後に読み込んだものだけが残ります。
 
-図 5-1-1: ファイルを置く場所
+1. `WEB-INF` の直下
+2. `META-INF` の下
+3. ビルトイン（mayaaのJARファイル内に含まれるもの）
+
+ファイルを置く場所
 ```
 WEB-INF/
+ |-- org.seasar.mayaa.provider.ServiceProvider   ①
  +-- classes/
- |    |
  |    +-- META-INF/
  |    |    |
- |    |    +-- org.seasar.mayaa.provider.ServiceProvider
+ |    |    +-- org.seasar.mayaa.provider.ServiceProvider ②
  |    |
  |    +-- (クラスファイルなど)
  |
  +-- lib/
+ |    +-- xxxxxxx.jar
+ |    |    +--　META-INF/
+ |    |         +-- org.seasar.mayaa.provider.ServiceProvider ②
+ |    +-- mayaa-[version].jar　③
  |
  (省略)
 ```
