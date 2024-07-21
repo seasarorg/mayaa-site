@@ -43,6 +43,44 @@ WEB-INF/
 </provider>
 ```
 
+```xml {data-filename=org.seasar.mayaa.provider.ServiceProvider}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE provider
+    PUBLIC "-//The Seasar Foundation//DTD Mayaa Provider 1.0//EN"
+    "http://mayaa.seasar.org/dtd/mayaa-provider_1_0.dtd">
+<provider>
+    <engine>
+        <!-- Mayaa Engineに関する設定 -->
+    </engine>
+    <scriptEnvironment>
+        <!-- Mayaa内のスクリプトエンジンから参照できるプロパティのスコープ定義など -->
+    </scriptEnvironment>
+    <specificationBuilder>
+        <!-- Mayaa内のスクリプトエンジンから参照できるプロパティのスコープ定義など -->
+    </specificationBuilder>
+    <libraryManager>
+    <templateBuilder class="org.seasar.mayaa.impl.builder.TemplateBuilderImpl">
+    <pathAdjuster class="org.seasar.mayaa.impl.builder.PathAdjusterImpl">
+    <templateAttributeReader>
+    <parentSpecificationResolver class="org.seasar.mayaa.impl.engine.specification.ParentSpecificationResolverImpl">
+
+</provider>
+```
+
+`~`は`org.seasar.mayaa`を表します。
+| エレメント名 | 要求されるインタフェース                      | |
+|------------|-------------------------------------------|--------------------|
+| engine     | org.seasar.mayaa.engine.Engine            <br>[org.seasar.mayaa.impl.engine.EngineImpl](#engine) ||
+| parentSpecificationResolver | org.seasar.mayaa.engine.specification.ParentSpecificationResolver <br> [org.seasar.mayaa.impl.engine.specification.ParentSpecificationResolverImpl](#parentSpecificationResolver) ||
+| scriptEnvironment       | org.seasar.mayaa.cycle.script.rhino.ScriptEnvironment <br>[org.seasar.mayaa.impl.cycle.script.rhino.ScriptEnvironmentImpl](#scriptEnvironment) |
+| templateAttributeReader | org.seasar.mayaa.builder.library.TemplateAttributeReader <br>[org.seasar.mayaa.impl.builder.library.TemplateAttributeReaderImpl](#templateAttributeReader) |
+| specificationBuilder    | org.seasar.mayaa.builder.SpecificationBuilder <br>[org.seasar.mayaa.impl.builder.SpecificationBuilderImpl](#specificationBuilder) |
+| templateBuilder         | org.seasar.mayaa.builder.TemplateBuilder<br>[org.seasar.mayaa.impl.builder.TemplateBuilderImpl](#templateBuilder) |
+| pathAdjuster            | org.seasar.mayaa.builder.PathAdjuster<br>[org.seasar.mayaa.impl.builder.PathAdjusterImpl](/docs/settings/path_adjust_settings/) |
+| libraryManager          | org.seasar.mayaa.builder.library.LibraryManager<br>[org.seasar.mayaa.impl.builder.library.LibraryManagerImpl](/docs/settings/library_manager/) |
+| templateAttributeReader | org.seasar.mayaa.builder.library.TemplateAttributeReader<br>[org.seasar.mayaa.impl.builder.library.TemplateAttributeReaderImpl](#templateAttributeReader) |
+
+
 #### ■Engine のパラメータ {#engine}
 
 Mayaa 標準の Engine に対するパラメータをいくつか説明します。デフォルト設定は下記の通りです。
