@@ -77,6 +77,34 @@ WEB-INF/
 </provider>
 ```
 
+### MayaaServletの初期化パラメータ (1.3.0以降)
+
+MayaaServlet に対して web.xml で初期化パラメータ(`init-param`)を設定できます。
+
+#### ■enableBackwardOrderLoading
+
+各ファクトリクラス、ServiceProviderの生成時の順序を逆順（WEB-INF内、ロード中のMETA-INF内、ビルトイン）に変更します。
+これまでは順に生成されてもより後から生成されたもので破棄および上書きされていたため無駄となっていました。
+
+デフォルトは "`false`" です。有効にする場合は "`true`" に設定してください。
+
+```xml {data-filename=src/main/webapp/WEB-INF/web.xml}
+<servlet>
+    <servlet-name>MayaaServlet</servlet-name>
+    <servlet-class>org.seasar.mayaa.impl.MayaaServlet</servlet-class>
+    <init-param>
+        <param-name>enableBackwardOrderLoading</param-name>
+        <param-value>true</param-value>
+    </init-param>
+</servlet>
+```
+
+ただし、`class`属性で指定されたクラスにインタフェースクラスを1つ引数にとるコンストラクタが定義されている場合は互換性のため元の順序で生成を行います。
+
+### ServiceProviderのエレメントとデフォルト実装 (1.3.0以降)
+
+1.3.0以降、ServiceProvider定義のXMLで `class` 属性を省略できるようになりました。省略した場合はビルトインの設定ファイルと同じ実装がデフォルトとして使用されます。実装を変更したい場合のみ旧来通り `class` 属性で指定します。
+
 `~`は`org.seasar.mayaa`を表します。
 | エレメント名 | 要求されるインタフェース                      | |
 |------------|-------------------------------------------|--------------------|
@@ -184,3 +212,6 @@ Mayaa 標準の `TemplateBuilder` に対するパラメータをいくつか説�
 
 `replaceSSIInclude`
 : <a href="/docs/settings/include/">SSI の include 記述を insert プロセッサに置き換える機能</a>を有効にするかを指定します。デフォルトは "`false`" です。
+
+`useNewParser` (1.3.0以降)
+: HTML Living Standardの定義に近い実験的な新パーサを使用するかどうかを指定します。デフォルトは "`false`" (NekoHTMLパーサを使用)です。新パーサでは Unquoted attribute value や `@attr`, `:attr` といったVue等で使われる属性記法に対応しています。

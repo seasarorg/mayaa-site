@@ -24,7 +24,7 @@ Mevenではarchetypeというプロジェクトのテンプレートを元に初
 それを利用してWARプロジェクトを作成し、簡易に動作させるように[Jetty](https://www.eclipse.org/jetty/)で実行できるようにします。
 下記の環境を前提とします。
 
-* Java8 以上のJava開発環境
+* Java 8 以上のJava開発環境 (Mayaa 1.3.0 以降は Java 8 が最低要件です)
 * Maven 3 以上
 
 #### WARプロジェクトの生成
@@ -103,7 +103,7 @@ Hit <enter> to redeploy:
   <dependency>
     <groupId>com.github.seasarorg.mayaa</groupId>
     <artifactId>mayaa</artifactId>
-    <version>1.2</version>
+    <version>1.3.0</version>
   </dependency>
 ```
 
